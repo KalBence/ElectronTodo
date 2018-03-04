@@ -1,0 +1,17 @@
+<h3>New TOdo</h3>
+<input id="todo" type="text">
+<button id="btn">Add</button>
+<script>
+    const {ipcRenderer ,remote} = require('electron')
+
+    const btn = document.getElementById('btn');
+    
+
+    btn.addEventListener('click', () => {
+        todo = document.getElementById("todo").value;
+        ipcRenderer.send('new-todo', todo);
+        var window = remote.getCurrentWindow();
+        window.close();
+    })
+
+</script>

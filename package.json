@@ -1,0 +1,26 @@
+{
+  "name": "electron-todo",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "KalBence",
+  "license": "",
+  "devDependencies": {
+    "electron": "~1.8.2",
+    "electron-builder": "^20.2.0"
+  },
+  "build": {
+    "appId": "todoApp",
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
